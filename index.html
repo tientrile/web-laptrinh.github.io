@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF - 8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title>LÊ TRÍ TIÊN</title>
+        <style>
+            p.indent{
+                padding-left: 1.8em;
+            }
+            body{
+                font-size: 14px;
+                margin: 0;
+                padding: 0;
+                line-height: 1.5;
+            }
+            .highlighted{
+                background-color: yellow;
+            }
+            .container{
+                width: 800px;
+                margin: 20px auto;
+                border: 1px solid#000;
+                padding: 20px;
+            }
+            .header, .section{
+                text-align: center;
+            }
+            .header .title{
+                margin-top: 10px;
+                font-size: 16px;
+            }
+            .header-container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 20px;
+            }
+            .left-section{
+                text-align: center;
+                transform: translateX(15%);
+            }
+            .right-section{
+                text-align: center;
+                transform: translateX(-15%);
+            }
+            .options {
+                font-size: 17px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 10px;
+                transform: translateX(8%);
+                line-height: 20px;
+            }
+            .option {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 45%;
+            }
+            .note{
+                font-style: italic;
+                font-size: 1.1em;
+            }
+            .school-name{
+                font-weight: bold;
+                position: relative;
+                display: inline-block;
+                margin-top: 0px;
+                padding-bottom: 5px;
+            }
+            .school-name::after{
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                width: 60%;
+                border-bottom: 1px solid black;
+            }
+            .frame{
+                transform: translateX(549%);
+                width: 90px;
+                height: 30px;
+                border: 1px solid #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .khungten{
+                display: flex;
+                justify-content: space-between;
+                border: 1px solid black;
+                align-items: center;
+                padding: 0px;
+                width: 700px;
+                height: 33px;
+                transform: translateX(6.9%);
+            }
+            .hoten{
+                transform: translateX(5%);
+                transform: scale(0.94);
+            }
+            .lop{
+                flex: 1;
+                transform: translateX(3%);
+            }
+            .separator{
+                transform: translateX(20%);
+                border-left: 1px solid black;
+                height: 35px;
+            }
+            .diem{
+                flex: 1;
+                transform: translateX(3%);
+            }
+            .mauu{
+                color: red;
+                transform: translateX(-1060%);
+                scale: 1.4;
+            }
+            .table{
+                border-collapse: collapse;
+                text-align: center;
+                .ma-de, .so-bao-danh, .phan-trac-nghiem{
+                    display: flex;
+                    white-space: nowrap;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .fill{
+                    background-color: black;
+                    scale: 0.75;
+                }
+                .text-input{
+                    width: 13px;
+                    margin: 0.6px;
+                }
+                th, tr, .table-date{
+                    border: 1px solid black;
+                }
+                transform: translateX(1%);
+            }
+            .instructions{
+                transform: translateX(10%);
+                font-size: 14px;
+                margin-top: 10px;
+                line-height: 1.4; 
+                /* this bug ?? */
+            }
+            
+            .question{
+                font-size: 17px;
+                transform: translateX(5%);
+                line-height: 0.8;
+            }
+            .footer{
+                text-align: center;
+                font-size: 12px;
+                margin-top: 10px;
+            }
+            .cau{
+                transform: translateX(2.2%);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "header-container">
+                <div class = "left-section">
+                    <div>SỞ GD & ĐT QUẢNG NAM</div>
+                    <div class="school-name">TRƯỜNG THPT LƯƠNG THÚC KỲ</div>
+                    <div class="note">(Đề có 2 trang)</div>
+                </div>
+                <div class = "right-section">
+                    <div><strong>KIỂM TRA 15 PHÚT - NĂM HỌC 2024 - 2025</strong></div>
+                    <div><strong>MÔN TIN HỌC - KHỐI LỚP 12</strong></div>
+                    <div class = "note">Thời gian làm bài: 10 phút - (Đề có 10 câu)</div>
+                </div>
+            </div>
+            <p></p><p class = "frame">Mã đề 234</p>
+            <hr> <br>
+            <div>
+
+            </div>
+            <div class = "khungten">
+                <div class = "hoten">HỌ TÊN: <strong>LÊ TRÍ TIÊN</strong></div>
+                <div class = "separator"></div>
+                <div class = "lop">LỚP: ...<strong>12A3</strong>...............</div>
+                <div class = "separator"></div>
+                <p class="diem">Điểm: <p class = "mauu"><strong>10</strong></p>
+            </div>
+            <br>
+            <br>
+            <table class = "table">
+                <thead>
+                    <tr>
+                        <th>Mã đề</th>
+                        <th>Số báo danh</th>
+                        <th>Đáp án trắc nghiệm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class = "table-data">
+                            <table class = "ma-de">
+                                <tr>
+                                    <td class = "fill">000</td>
+                                    <td>
+                                        <input class = "text-input" type = "text">
+                                        <input class = "text-input" type = "text">
+                                        <input class = "text-input" type = "text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>
+                                        <label for="ma-de">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <label for= "ma-de">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <label for= "ma-de">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <label for= "ma-de">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <label for= "ma-de">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <label for= "ma-de">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>
+                                        <label for= "ma-de">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>
+                                        <label for= "ma-de">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>
+                                        <label for= "ma-de">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>
+                                        <label for= "ma-de">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="table-date">
+                            <table class="so-bao-danh">
+                                <tr>
+                                    <td class = "fill">000</td>
+                                    <td>
+                                        <input class = "text-input" type = "text">
+                                        <input class = "text-input" type = "text">
+                                        <input class = "text-input" type = "text">
+                                        <input class = "text-input" type = "text">
+                                        <input class = "text-input" type = "text">
+                                        <input class = "text-input" type = "text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>
+                                        <label for = "so-bao-danh">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <label for = "so-bao-danh">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <label for = "so-bao-danh">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <label for = "so-bao-danh">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <label for = "so-bao-danh">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <label for = "so-bao-danh">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>
+                                        <label for = "so-bao-danh">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>
+                                        <label for = "so-bao-danh">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>
+                                        <label for = "so-bao-danh">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>
+                                        <label for = "so-bao-danh">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                            <input type = "radio">
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class = "table-data">
+                            <table class = "phan-trac-nghiem">
+                                <tr>
+                                    <td>
+                                        <table class = "trac-nghiem">
+                                            <tr>
+                                                <td class = "fill">000</td>
+                                                <td>A</td>
+                                                <td>B</td>
+                                                <td>C</td>
+                                                <td>D</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkboxA" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkboxB" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkboxC" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkboxD" onclick="tool()">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox2A" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox2B" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox2C" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox2D" onclick="tool()">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox3A" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox3B" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox3C" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox3D" onclick="tool()">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox4A" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox4B" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox4C" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox4D" onclick="tool()">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox5A" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox5B" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox5C" onclick="tool()">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio" type="checkbox" id="checkbox5D" onclick="tool()">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class = "trac-nghiem">
+                                            <tr>
+                                                <td class = "fill">000</td>
+                                                <td>A</td>
+                                                <td>B</td>
+                                                <td>C</td>
+                                                <td>D</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>14</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>16</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>17</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>18</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>20</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class = "trac-nghiem">
+                                            <tr>
+                                                <td class = "fill">000</td>
+                                                <td>A</td>
+                                                <td>B</td>
+                                                <td>C</td>
+                                                <td>D</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>22</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>23</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>24</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>25</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>26</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>27</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>28</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>29</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>30</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class = "trac-nghiem">
+                                            <tr>
+                                                <td class = "fill">000</td>
+                                                <td>A</td>
+                                                <td>B</td>
+                                                <td>C</td>
+                                                <td>D</td>
+                                            </tr>
+                                            <tr>
+                                                <td>31</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>32</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>33</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>34</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>35</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>36</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>37</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>38</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>39</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>40</td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                                <td>
+                                                    <input type = "radio">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class = "instructions">
+                <p><strong>Thí sinh lưu ý:</strong></p>
+                <ul>
+                    <li>Giữ cho phiếu phẳng, không bôi bẩn, làm rách, không tẩy xoá, để máy chấm.</li>
+                    <li>Tô <strong>kín</strong>, tô <strong>đậm</strong> các ô tương ứng với mã Đề thi, Số báo danh và đáp án đúng cho phần trắc nghiệm.</li>
+                    <li>Không được ghi đè, tô đen các ô vuông đen, để máy định vị chính xác.</li>
+                </ul>
+            </div>
+            <p class="question"><strong>Câu 1:</strong> Router trong mạng đóng vai trò gì?</p>
+            <div class="options">
+              <div class="option">
+                <label id = "1a"> <strong>A</strong>. Kiểm tra lỗi dữ liệu</label>
+                <label id = "1c"><strong>C</strong>. Chuyển tiếp bưu phẩm dữ liệu</label>
+              </div>
+              <div class="option">
+                <label id = "1b"><strong>B</strong>. Tạo và quản lý kết nối VPN</label>
+                <label id = "1d"><strong>D</strong>. Chia sẻ tài nguyên mạng</label>
+              </div>
+            </div>
+            <!-- Giao thức nào thường được sử dụng cùng với IP để quản lý kết nối và truyền dữ liệu trong Internet? -->
+            <p class="question"><strong>Câu 2:</strong> Giao thức nào thường được sử dụng cùng với IP để quản lý kết nối và truyền dữ liệu trong Internet?</p>
+            <div class="options">
+              <div class="option">
+                <label id = "2a"> <strong>A</strong>. TCP</label>
+                <label id = "2c"><strong>C</strong>. DHCP</label>
+              </div>
+              <div class="option">
+                <label id = "2b"><strong>B</strong>. SMTP</label>
+                <label id = "2d"><strong>D</strong>. FTP</label>
+              </div>
+            </div>
+            <p class="question"><strong>Câu 3:</strong> Giao thức TCP cung cấp cơ chế gì để đảm bảo truyền dữ liệu tin cậy?</p>
+            <div class="options">
+              <div class="option">
+                <label id = "3a"> <strong>A</strong>. Phát hiện và sửa lỗi</label>
+                <label id = "3c"><strong>C</strong>. Phân phối tải giữa các máy chủ</label>
+              </div>
+              <div class="option">
+                <label id = "3b"><strong>B</strong>. Chuyển đổi IP</label>
+                <label id = "3d"><strong>D</strong>. Chuyển đổi IP</label>
+              </div>
+            </div>
+            <p class="question"><strong>Câu 4:</strong> Giao thức mạng là gì?</p>
+            <div class="options">
+              <div class="option">
+                <label id = "4a"> <strong>A</strong>. Tập hợp các quy định về cách thức giao tiếp trong mạng</label>
+                <label id = "4c"><strong>C</strong>. Phần mềm dùng để kiểm tra bảo mật</label>
+              </div>
+              <div class="option">
+                <label id = "4b"><strong>B</strong>. Một loại thiết bị mạng</label>
+                <label id = "4d"><strong>D</strong>. Phần cứng trong mạng</label>
+              </div>
+            </div>
+            <p class="question"><strong>Câu 5:</strong> Giao thức nào không đảm bảo dữ liệu được truyền đúng thứ tự và có thể mất mát dữ liệu?</p>
+            <div class="options">
+              <div class="option">
+                <label id = "5a"> <strong>A</strong>. TCP</label>
+                <label id = "5c"><strong>C</strong>. HTTP</label>
+              </div>
+              <div class="option">
+                <label id = "5b"><strong>B</strong>. IP</label>
+                <label id = "5d"><strong>D</strong>. UDP</label>
+              </div>
+            </div>
+            <div class="footer">
+                <p>Project make by: Le Tri Tien&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Trang 1/2 - Mã đề 234</p>
+            </div>
+            <script>
+                function tool() {
+                  // Lấy tất cả checkbox và phần tử text tương ứng
+                  const options = [
+                    { checkboxId: "checkboxA", textId: "1a" },
+                    { checkboxId: "checkboxB", textId: "1b" },
+                    { checkboxId: "checkboxC", textId: "1c" },
+                    { checkboxId: "checkboxD", textId: "1d" },
+                    { checkboxId: "checkbox2A", textId: "2a" },
+                    { checkboxId: "checkbox2B", textId: "2b" },
+                    { checkboxId: "checkbox2C", textId: "2c" },
+                    { checkboxId: "checkbox2D", textId: "2d" },
+                    { checkboxId: "checkbox3A", textId: "3a" },
+                    { checkboxId: "checkbox3B", textId: "3b" },
+                    { checkboxId: "checkbox3C", textId: "3c" },
+                    { checkboxId: "checkbox3D", textId: "3d" },
+                    { checkboxId: "checkbox4A", textId: "4a" },
+                    { checkboxId: "checkbox4B", textId: "4b" },
+                    { checkboxId: "checkbox4C", textId: "4c" },
+                    { checkboxId: "checkbox4D", textId: "4d" },
+                    { checkboxId: "checkbox5A", textId: "5a" },
+                    { checkboxId: "checkbox5B", textId: "5b" },
+                    { checkboxId: "checkbox5C", textId: "5c" },
+                    { checkboxId: "checkbox5D", textId: "5d" }
+                  ];
+            
+                  // Kiểm tra trạng thái của từng checkbox và áp dụng lớp "highlighted"
+                  options.forEach(option => {
+                    const checkbox = document.getElementById(option.checkboxId);
+                    const text = document.getElementById(option.textId);
+                    if (checkbox.checked) {
+                      text.classList.add("highlighted");
+                    } else {
+                      text.classList.remove("highlighted");
+                    }
+                  });
+                }
+              </script>
+        </div>
+        </div>
+    </body>
+</html>
